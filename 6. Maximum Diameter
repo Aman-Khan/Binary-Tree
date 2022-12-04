@@ -8,3 +8,5 @@ int maxDia(Node* root, int& maxi){
     maxi=max(maxi, l+r);
     return 1+max(l,r);
 }
+
+//print maxi
