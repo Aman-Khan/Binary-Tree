@@ -1,7 +1,7 @@
 //1-based indexing
 int maxDepth(Node* root){
     if(root==NULL){
-        return 0;
+        return 0; //replace 0 with -1 for 0-based indexing
     }
     
     int lh = maxDepth(root->left)+1;
