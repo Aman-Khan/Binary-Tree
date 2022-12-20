@@ -1,0 +1,37 @@
+    void leftBorder(Node* root, vector<int> &ans){
+        if(root==NULL) return;
+        if(root->left==NULL && root->right==NULL) return;
+        ans.push_back(root->data);
+        if(root->left!=NULL) leftBorder(root->left, ans);
+        else if(root->right!=NULL) leftBorder(root->right, ans);
+    }
+    
+    void leafBorder(Node* root, vector<int> &ans){
+        if(root==NULL) return;
+        leafBorder(root->left, ans);
+        if(root->left==NULL && root->right==NULL){
+            ans.push_back(root->data);
+        }
+        leafBorder(root->right, ans);
+    }
+    
+    void rightBorder(Node* root, vector<int> &ans){
+        if(root==NULL) return;
+        if(root->left==NULL && root->right==NULL) return;
+        if(root->right!=NULL) rightBorder(root->right, ans);
+        else if(root->left!=NULL) rightBorder(root->left, ans);
+        ans.push_back(root->data);
+    }
+
+    vector <int> boundary(Node *root)
+    {
+        vector<int> ans;
+        ans.push_back(root->data);
+        leftBorder(root->left, ans);
+        if(root->left!=NULL || root->right!=NULL){
+            leafBorder(root, ans);
+        }
+        rightBorder(root->right, ans);
+        return ans;
+        //Your code here
+    }
