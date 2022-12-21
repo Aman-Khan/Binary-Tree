@@ -1,0 +1,20 @@
+void bottomView(Node* root){
+    map<int, int> ans;
+    queue<pair<Node*, int>> q;
+    int y=0;
+    q.push({root, y});
+    while(!q.empty()){
+        pair<Node*, int> temp = q.front();
+        ans[temp.second]=temp.first->data;
+        q.pop();
+        if(temp.first->left!=NULL){
+            q.push({temp.first->left, temp.second-1});
+        }
+        if(temp.first->right!=NULL){
+            q.push({temp.first->right, temp.second+1});
+        }
+    }
+    for(auto i:ans){
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+}
