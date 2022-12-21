@@ -1,0 +1,18 @@
+//using recursion
+  bool validateBST(Node* root, int mini, int maxi){
+    if(root==NULL) return true;
+    if(root>data>=maxi || root->data<=mini) return false;
+    return validateBST(root->left, mini, root->data) && validateBST(root->right, root->data, maxi);
+  }
+  
+  
+//using inorder traversal
+  bool isValidBST(TreeNode* root) {
+      return vbst(root, LONG_MIN, LONG_MAX);
+      vector<int> track;
+      inOrder(root, track);
+      for(int i=1; i<track.size(); i++){
+          if(track[i-1]>=track[i]) return false;
+      }
+      return true;
+  }
