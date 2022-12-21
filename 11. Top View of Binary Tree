@@ -1,0 +1,26 @@
+    vector<int> topView(Node *root)
+    {
+        vector<int> res;
+        if(root==NULL) return res;
+        map<int, int> cordiNodes;
+        queue<pair<Node* ,int>> qu;
+        int y=0;
+        qu.push({root, y});
+        while(!qu.empty()){
+            pair<Node*, int> temp = qu.front();
+            qu.pop();
+            if(cordiNodes.find(temp.second)==cordiNodes.end()){
+                cordiNodes[temp.second]={temp.first->data};
+            }
+            if(temp.first->left!=NULL){
+                qu.push({temp.first->left, temp.second-1});
+            }
+            if(temp.first->right!=NULL){
+                qu.push({temp.first->right, temp.second+1});
+            }
+        }
+        for(auto i:cordiNodes){
+            res.push_back(i.second);
+        }
+        return res;
+    }
