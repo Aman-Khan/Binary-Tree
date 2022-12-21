@@ -1,0 +1,11 @@
+bool checkSym(Node* leftSide, Node* rightSide){
+  if(leftSide==NULL || rightSide==NULL){
+    return leftSide==rightSide;
+    }
+   if(leftSide->data!=rightSide->data) return false;
+   return checkSym(leftSide->left, rightSide->right) && checkSym(leftSide->right, rightSide->left);
+   
+bool symmetrical(Node* root){
+  if(root==NULL) return true;
+  return checkSym(root->left, root->right);
+}
