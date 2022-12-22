@@ -1,0 +1,10 @@
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* node1, TreeNode* node2) {
+        if(root==NULL || root==node1 || root==node2){
+            return root;
+        }
+        TreeNode* leftNode = lowestCommonAncestor(root->left, node1, node2);
+        TreeNode* rightNode = lowestCommonAncestor(root->right, node1, node2);
+        if(leftNode==NULL) return rightNode;
+        else if(rightNode==NULL) return leftNode;
+        else return root;
+    }
