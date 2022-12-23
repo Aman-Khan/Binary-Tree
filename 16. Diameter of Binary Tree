@@ -1,7 +1,0 @@
-    int diameter(TreeNode* root, int &dia){
-        if(root==NULL) return 0;
-        int lp = diameter(root->left, dia);
-        int rp = diameter(root->right, dia);
-        dia = max(dia, lp+rp);
-        return max(lp, rp)+1;
-    }
