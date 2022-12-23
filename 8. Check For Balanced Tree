@@ -1,18 +1,13 @@
-
-int maxDepth(Node* root){
+int checkForBalancedTree(Node* root){
     if(root==NULL) return 0;
-    int lh = maxDepth(root->left);
-    int rh = maxDepth(root->right);
-    return 1+max(lh, rh);
+    int ls = checkForBalancedTree(root->left); 
+    if(ls==-1) return -1;
+    int rs = checkForBalancedTree(root->right);
+    if(rs==-1) return -1;
+    if(abs(ls-rs)>1) return -1;
+    return max(ls, rs)+1;
 }
 
-bool checkForBalancedTree(Node* root){
-    if(root==NULL){
-        return false;
-    }
-
-    int lh = maxDepth(root->left);
-    int rh = maxDepth(root->right);
-    if(abs(lh-rh)<=1) return true;
-    return false;
+bool checkBalance(Node* root){
+    return checkForBalancedTree(root)!=-1;
 }
