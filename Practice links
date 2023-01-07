@@ -1,10 +1,10 @@
 //Traversals
-Pre Order Traversal          :-    https://practice.geeksforgeeks.org/problems/preorder-traversal/1
-In Order Traversal           :-    https://practice.geeksforgeeks.org/problems/inorder-traversal/1
-Post Order Traversal         :-    https://practice.geeksforgeeks.org/problems/postorder-traversal/1
+Pre Order Traversal          :-    https://leetcode.com/problems/binary-tree-preorder-traversal/
+In Order Traversal           :-    https://leetcode.com/problems/binary-tree-inorder-traversal/
+Post Order Traversal         :-    https://leetcode.com/problems/binary-tree-postorder-traversal/
 Level Order Traversal        :-    https://leetcode.com/problems/binary-tree-level-order-traversal/
-Vertical Order Traversal     :-    https://practice.geeksforgeeks.org/problems/print-a-binary-tree-in-vertical-order/1
-Zig-Zag Tree Traversal       :-    https://practice.geeksforgeeks.org/problems/zigzag-tree-traversal/1
+Vertical Order Traversal     :-    https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+Zig-Zag Tree Traversal       :-    https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 Boundary Traversal           :-    https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 
 
@@ -16,12 +16,16 @@ Right View of Binary Tree    :-    https://leetcode.com/problems/binary-tree-rig
 
 
 //Operations
-Validate Binary Search Tree  :-    https://leetcode.com/problems/validate-binary-search-tree/
-Symmetric Binary Tree        :-    https://practice.geeksforgeeks.org/problems/symmetric-tree/1
+Symmetric Binary Tree        :-    https://leetcode.com/problems/symmetric-tree/
 Maximum Depth of BT          :-    https://leetcode.com/problems/maximum-depth-of-binary-tree/
 Maximum Diameter of BT       :-    https://leetcode.com/problems/diameter-of-binary-tree/
 Maximum Path sum of BT       :-    https://leetcode.com/problems/binary-tree-maximum-path-sum/
 Balance BT                   :-    https://leetcode.com/problems/balanced-binary-tree/
-Check Two Tree Identical     :-    https://practice.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1
+Check Two Tree Identical     :-    https://leetcode.com/problems/same-tree/
 Print Root To Node Path      :-    N/A
 Lowest Common Ancestor       :-    https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+Flatten a BT                 :-    https://leetcode.com/problems/flatten-binary-tree-to-linked-list/                                                                                                      (recursive, stack(r,l), morris) 
+
+//BST
+Validate Binary Search Tree  :-    https://leetcode.com/problems/validate-binary-search-tree/
+Insert into a BST            :-    https://leetcode.com/problems/insert-into-a-binary-search-tree/
