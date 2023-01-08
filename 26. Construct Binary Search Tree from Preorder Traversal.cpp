@@ -1,3 +1,22 @@
+//O(3N), O(1)
+    TreeNode* buildBST(vector<int>& preorder, int &i, int mini, int maxi, int n){
+        if(i>=n) return NULL;
+        if(preorder[i]<mini || preorder[i]>maxi) return NULL;
+        int ele = preorder[i++];
+        TreeNode* root = new TreeNode(ele);
+        root->left = buildBST(preorder, i, mini, ele, n);
+        root->right = buildBST(preorder, i, ele, maxi, n);
+        return root;
+    }
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        int mini = INT_MIN;
+        int maxi = INT_MAX;
+        int i=0;
+        return buildBST(preorder, i, mini, maxi, preorder.size());
+    }
+
+
+//O(NLogN), O(N)
     int findPostion(vector<int>& inorder, int ele){
         int ind = -1;
         for(int i=0; i<inorder.size(); i++){
