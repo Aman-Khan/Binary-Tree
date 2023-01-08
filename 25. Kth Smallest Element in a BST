@@ -1,0 +1,15 @@
+    void inOrder(TreeNode* root, int &k, int &x){
+        if(!root) return;
+        inOrder(root->left, k, x);
+        k--;
+        if(k==0){
+            x=root->val;
+            return;
+        }
+        inOrder(root->right, k, x);
+    }
+    int kthSmallest(TreeNode* root, int k) {
+        int x = 0;
+        inOrder(root, k, x);
+        return x;
+    }
