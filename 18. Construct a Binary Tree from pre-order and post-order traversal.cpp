@@ -1,4 +1,27 @@
-  //without map
+//by creating map
+    TreeNode* insertNode(TreeNode* root, int x){
+        if(!root){
+            TreeNode* temp = new TreeNode(x);
+            return temp;
+        }
+        if(root->val>x){
+            root->left = insertNode(root->left, x);
+        }
+        else{
+            root->right = insertNode(root->right, x);
+        }
+        return root;
+    }
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        TreeNode* root = NULL;
+        for(auto i:preorder){
+            root=insertNode(root, i);
+        }
+        return root;
+    }
+
+
+//without map
     int findPosition(vector<int> &inorder, int ele, int n){
         for(int i=0; i<n; i++){
             if(inorder[i]==ele) return i;
