@@ -1,3 +1,12 @@
+//recursive
+void traverse(TreeNode* root, map<int, map<int, multiset<int>>>& vertex, int x, int y){
+if(!root) return;
+vertex[x][y].insert(root->val);
+traverse(root->left, vertex, x-1, y+1);
+traverse(root->right, vertex, x+1, y+1);
+}
+
+//iterative
 vector<vector<int>> verticalTraversal(TreeNode* root) {
         vector<vector<int>> ans;
         if(root==NULL) return ans;
