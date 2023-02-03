@@ -33,4 +33,5 @@ Kth Smallest Element in BST  :-    https://leetcode.com/problems/kth-smallest-el
 Construct BST from Preorder  :-    https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
 Two Sum in BST               :-    https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 Balance a BST                :-    https://leetcode.com/problems/balance-a-binary-search-tree/
-                    
+Flatten BST to Single LL     :-    https://www.codingninjas.com/codestudio/problems/flatten-bst-to-a-sorted-list_1169459
+Flatten BST to Doubly LL     :-    https://practice.geeksforgeeks.org/problems/binary-tree-to-dll/1
